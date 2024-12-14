@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Fragments.HomeFragment">
+
+    <!-- Employee Photo -->
+    <ImageView
+        android:id="@+id/employeePhoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:padding="10dp"
+        android:src="@drawable/photographer"
+        android:contentDescription="Employee Photo"
+        android:background="@drawable/image_background"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/employeeIdEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Employee ID"
+        android:inputType="text"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/image_background"
+        android:layout_below="@id/employeePhoto"/>
+
+    <!-- Check-In Button -->
+    <LinearLayout
+        android:id="@+id/checkInButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/employeeIdEditText"
+        android:background="@drawable/image_background">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/checkin"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check-In"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <!-- Check-Out Button -->
+    <LinearLayout
+        android:id="@+id/checkOutButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/employeeIdEditText"
+        android:background="@drawable/image_background">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/checkout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check-Out"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
