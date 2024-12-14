@@ -3,4 +3,12 @@
     <string name="toolbar_name">Technopinch EMS</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_in_9_00_am">Check-in: 9:00 AM</string>
+    <string name="check_out">Check-out: --</string>
+    <string name="id">Id:</string>
+    <string name="location_23_03_72_58">Location: 23.03, 72.58</string>
+    <string name="location">Location: 23.03, 72.58</string>
+    <string name="enter_employee_id">Enter Employee ID</string>
+    <string name="check_in">Check-In</string>
+    <string name="check_out_button">Check-Out</string>
 </resources>

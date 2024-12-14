@@ -2,6 +2,7 @@ package com.example.etms.Fragments;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,7 +20,6 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -115,6 +115,7 @@ public class HomeFragment extends Fragment {
     }
 
     // request for capture image
+    @SuppressLint("QueryPermissionsNeeded")
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(requireActivity().getPackageManager()) != null) {
@@ -304,15 +305,13 @@ public class HomeFragment extends Fragment {
         }
         fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
             if (location != null) {
-                double latitude = location.getLatitude();
-                double longitude = location.getLongitude();
+//                double latitude = location.getLatitude();
+//                double longitude = location.getLongitude();
 //                Toast.makeText(getContext(), "Location fetched: Lat " + latitude + ", Lon " + longitude, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(getContext(), "Unable to fetch location. Try again.", Toast.LENGTH_SHORT).show();
             }
-        }).addOnFailureListener(e -> {
-            Toast.makeText(getContext(), "Error fetching location: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        });
+        }).addOnFailureListener(e -> Toast.makeText(getContext(), "Error fetching location: " + e.getMessage(), Toast.LENGTH_SHORT).show());
     }
 
 }

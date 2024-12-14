@@ -21,6 +21,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_margin="12dp"
+            android:contentDescription="capture an image of employee"
             android:layout_gravity="center_vertical"
             android:scaleType="centerCrop"
             android:src="@drawable/photographer"
@@ -38,7 +39,7 @@
                 android:id="@+id/employeeId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Id:"
+                android:text="@string/id"
                 android:fontFamily="@font/nunito_regular1"
                 android:textColor="@color/colorSecondary"
                 android:textSize="16sp"
@@ -48,7 +49,7 @@
                 android:id="@+id/checkInTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Check-in: 9:00 AM"
+                android:text="@string/check_in_9_00_am"
                 android:textColor="@color/colorSecondary"
                 android:textSize="14sp"/>
 
@@ -56,7 +57,7 @@
                 android:id="@+id/checkOutTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Check-out: --"
+                android:text="@string/check_out"
                 android:textColor="@color/colorSecondary"
                 android:textSize="14sp"/>
 
@@ -64,7 +65,7 @@
                 android:id="@+id/latitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location: 23.03, 72.58"
+                android:text="@string/location_23_03_72_58"
                 android:textColor="@color/colorSecondary"
                 android:textSize="14sp"/>
 
@@ -72,7 +73,7 @@
                 android:id="@+id/longitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location: 23.03, 72.58"
+                android:text="@string/location"
                 android:textColor="@color/colorSecondary"
                 android:textSize="14sp"/>
         </LinearLayout>
@@ -82,63 +83,4 @@
 
 
 
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:orientation="horizontal"-->
-<!--    android:padding="8dp"-->
-<!--    android:background="@drawable/image_background"-->
-<!--    android:layout_margin="8dp">-->
 
-<!--    <ImageView-->
-<!--        android:id="@+id/employeeImage"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:layout_margin="5dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:scaleType="centerCrop" />-->
-
-
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_margin="5dp">-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/employeeId"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:textStyle="bold"-->
-<!--        android:paddingTop="4dp"-->
-<!--        android:layout_margin="2dp"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/checkInTime"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="2dp"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/checkOutTime"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="2dp"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/latitude"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="2dp"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/longitude"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="2dp"/>-->
-
-
-<!--    </LinearLayout>-->
-
-<!--</LinearLayout>-->

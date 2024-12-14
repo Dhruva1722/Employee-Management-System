@@ -53,7 +53,7 @@ public class AttendanceDatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Method to insert check-in data
-    public long insertAttendance(String employeeId, String checkInTime, String checkOutTime, double latitude, double longitude, byte[] image) {
+    public void insertAttendance(String employeeId, String checkInTime, String checkOutTime, double latitude, double longitude, byte[] image) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_EMPLOYEE_ID, employeeId);
@@ -64,11 +64,11 @@ public class AttendanceDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_IMAGE, image);
 
         // Insert the row and return the new row ID
-        return db.insert(TABLE_ATTENDANCE, null, values);
+        db.insert(TABLE_ATTENDANCE, null, values);
     }
 
     // Method to update check-out time
-    public int updateCheckOut(String employeeId, String checkOutTime) {
+    public void updateCheckOut(String employeeId, String checkOutTime) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_CHECK_OUT_TIME, checkOutTime);
@@ -77,7 +77,7 @@ public class AttendanceDatabaseHelper extends SQLiteOpenHelper {
         String[] whereArgs = {employeeId};
 
         // Update the row and return the number of rows affected
-        return db.update(TABLE_ATTENDANCE, values, whereClause, whereArgs);
+        db.update(TABLE_ATTENDANCE, values, whereClause, whereArgs);
     }
 
     // Method to retrieve all attendance data

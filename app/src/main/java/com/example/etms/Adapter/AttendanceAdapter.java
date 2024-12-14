@@ -1,5 +1,6 @@
 package com.example.etms.Adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ public class AttendanceAdapter extends RecyclerView.Adapter<AttendanceAdapter.At
         return new AttendanceViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull AttendanceViewHolder holder, int position) {
         AttendanceRecord record = records.get(position);

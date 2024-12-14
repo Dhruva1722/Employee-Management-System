@@ -25,7 +25,6 @@ import java.util.List;
 public class EmployeeFragment extends Fragment {
 
     private RecyclerView recyclerView;
-    private AttendanceAdapter adapter;
     private AttendanceDatabaseHelper dbHelper;
 
     @Override
@@ -66,7 +65,7 @@ public class EmployeeFragment extends Fragment {
             cursor.close();
         }
 
-        adapter = new AttendanceAdapter(records);
+        AttendanceAdapter adapter = new AttendanceAdapter(records);
         recyclerView.setAdapter(adapter);
     }
 }
